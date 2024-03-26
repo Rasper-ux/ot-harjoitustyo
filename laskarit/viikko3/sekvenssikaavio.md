@@ -19,6 +19,7 @@
     activate rautatietori
     rautatietori ->> kallen_kortti: kasvata_arvoa(3)
     rautatietori -->> main
+
     deactivate rautatietori
     main ->> ratikka6: osta_lippu(kallen_kortti, 0)
     activate ratikka6
