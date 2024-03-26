@@ -5,19 +5,22 @@
     Pelilauta "1" -- "40" Ruutu
     Ruutu "1" -- "1" Ruutu : seuraava
     Ruutu "1" -- "0..8" Pelinappula
-    Ruutu "1" -- "1" Toiminto
-    Toiminto <|-- Aloitusruutu
-    Toiminto <|-- Vankila
-    Toiminto <|-- SattumaJaYhteismaa
-    Toiminto <|-- AsematJaLaitokset
-    Toiminto <|-- NormaalitKadut
-    SattumaJaYhteismaa "1" -- Kortti
-    NormaalitKadut "1" -- "1" Omistaja
-    Omistaja "1" -- "1" Pelaaja
-    NormaalitKadut "1" -- "1" Rakennus
-    Rakennus "0..4" -- "1" NormaalitKadut
-    Rakennus "1" -- "0..1" Hotelli
-    Pelaaja "2..8" -- "1" Monopolipeli
-    Pelaaja "1" -- "0..n" Rahaa
     Pelinappula "1" -- "1" Pelaaja
+    Pelaaja "2..8" -- "1" Monopolipeli
+    Ruutu <|-- Aloitusruutu
+    Ruutu <|-- Vankila
+    Ruutu <|-- Sattuma_ja_yhteismaa
+    Ruutu <|-- Asemat_ja_laitokset
+    Ruutu <|-- Normaalit_kadut
+    Sattuma_ja_yhteismaa "1" -- "1" Kortti
+    Kortti "1" -- "1" Toiminto
+    NormaalitKadut -- Toiminto
+    NormaalitKadut : omistaja -- Pelaaja
+    NormaalitKadut : talot
+    NormaalitKadut : hotelli
+    Vankila -- Toiminto
+    Aloitusruutu -- Toiminto
+    Asemat_ja_laitokset -- Toiminto
+    Normaalit_kadut -- Toimito
+    Pelaaja : rahaa
 ```
