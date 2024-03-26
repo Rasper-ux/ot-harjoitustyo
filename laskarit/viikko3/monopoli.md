@@ -2,6 +2,8 @@
  classDiagram
     Monopolipeli "1" -- "2" Noppa
     Monopolipeli "1" -- "1" Pelilauta
+    Monopolipeli "1" -- "1" Aloitusruutu
+    Monopolipeli "1" -- "1" Vankila
     Pelilauta "1" -- "40" Ruutu
     Ruutu "1" -- "1" Ruutu : seuraava
     Ruutu "1" -- "0..8" Pelinappula
@@ -14,13 +16,14 @@
     Ruutu <|-- Normaalit_kadut
     Sattuma_ja_yhteismaa "1" -- "1" Kortti
     Kortti "1" -- "1" Toiminto
-    NormaalitKadut -- Toiminto
-    NormaalitKadut : omistaja -- Pelaaja
-    NormaalitKadut : talot
-    NormaalitKadut : hotelli
+    Normaalit_kadut -- Toiminto
+    Normaalit_kadut -- "1" Omistaja
+    Omistaja -- Pelaaja
+    Normaalit_kadut -- Rakennus
+    Rakennus -- Talot
+    Rakennus -- Hotelli
     Vankila -- Toiminto
     Aloitusruutu -- Toiminto
     Asemat_ja_laitokset -- Toiminto
-    Normaalit_kadut -- Toimito
-    Pelaaja : rahaa
+    Pelaaja -- Rahaa
 ```
