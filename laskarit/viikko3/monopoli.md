@@ -14,16 +14,16 @@
     Ruutu <|-- Sattuma_ja_yhteismaa
     Ruutu <|-- Asemat_ja_laitokset
     Ruutu <|-- Normaalit_kadut
-    Sattuma_ja_yhteismaa "1" -- "1" Kortti
-    Kortti "1" -- "1" Toiminto
+    Sattuma_ja_yhteismaa : kortti
+    Sattuma_ja_yhteismaa -- Toiminto
     Normaalit_kadut -- Toiminto
-    Normaalit_kadut -- "1" Omistaja
-    Omistaja -- Pelaaja
+    Normaalit_kadut : Omistaja	
+    Normaalit_kadut -- Pelaaja
     Normaalit_kadut -- Rakennus
-    Rakennus -- Talot
-    Rakennus -- Hotelli
+    Rakennus : talot
+    Rakennus : hotelli
     Vankila -- Toiminto
     Aloitusruutu -- Toiminto
     Asemat_ja_laitokset -- Toiminto
-    Pelaaja -- Rahaa
+    Pelaaja : rahaa
 ```
