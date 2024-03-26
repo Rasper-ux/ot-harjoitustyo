@@ -18,8 +18,7 @@
     main ->> rautatietori: lataa_arvoa(kallen_kortti, 3)
     activate rautatietori
     rautatietori ->> kallen_kortti: kasvata_arvoa(3)
-    rautatietori -->> main
-
+    rautatietori -->> main: empty
     deactivate rautatietori
     main ->> ratikka6: osta_lippu(kallen_kortti, 0)
     activate ratikka6
