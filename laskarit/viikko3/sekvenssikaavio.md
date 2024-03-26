@@ -14,10 +14,8 @@
     main ->> laitehallinto: lisaa_lukija(ratikka6)
     main ->> laitehallinto: lisaa_lukija(bussi244)
     main ->> lippu_luukku: osta_matkakortti("Kalle")
-    activate lippu_luukku
     lippu_luukku ->> kallen_kortti: Matkakortti("Kalle")
     lippu_luukku ->> main: uusi_kortti
-    deactivate lippu_luukku
     main ->> rautatietori: lataa_arvoa(kallen_kortti, 3)
     activate rautatietori
     rautatietori ->> kallen_kortti: kasvata_arvoa(3)
