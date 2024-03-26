@@ -19,10 +19,10 @@
     Normaalit_kadut -- Toiminto	
     Normaalit_kadut -- Pelaaja
     Normaalit_kadut -- Rakennus
-    Rakennus -- Talot
-    Rakennus -- Hotellit
+    Rakennus -- "0..4" Talot
+    Rakennus -- "0..1" Hotellit
     Vankila -- Toiminto
     Aloitusruutu -- Toiminto
     Asemat_ja_laitokset -- Toiminto
-    Pelaaja -- Rahaa
+    Pelaaja "1" -- "0..n" Rahaa
 ```
