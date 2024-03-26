@@ -9,5 +9,4 @@
     main ->> laitehallinto: lisaa_lataaja(rautatetori)
     main ->> laitehallinto: lisaa_lukija(ratikka6)
     main ->> laitehallinto: lisaa_lukija(bussi244)
-
-``` 
+```
